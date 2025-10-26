@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import About from './components/About.vue';
 import Achivments from './components/Achivments.vue';
+import Contacts from './components/Contacts.vue';
 import Header from './components/Header.vue';
 import MainPage from './components/MainPage.vue';
+import Pricing from './components/Pricing.vue';
 import Problems from './components/Problems.vue';
 import Quirks from './components/Quirks.vue';
 import Separator from './components/ui/separator/Separator.vue';
@@ -22,8 +24,12 @@ import Separator from './components/ui/separator/Separator.vue';
     <Separator></Separator>
     <Achivments></Achivments>
     <Separator></Separator>
+    <Pricing></Pricing>
+    <Separator></Separator>
+    <Contacts></Contacts>
+    <Separator></Separator>
     <footer class="lg:w-1/2 w-full mx-auto text-center text-muted-foreground py-8">
-      <p>разработано студией Бодрые Котлы для меня</p>
+      <p>разработано студией Бодрые Котлы для Мены</p>
     </footer>
   </div>
 </template>
