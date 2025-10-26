@@ -19,7 +19,7 @@
                                 class="rounded-full bg-gradient-to-r from-pink-300 to-pink-400 text-white p-3 shadow-md">
                                 <MessageSquare class="size-4" />
                             </Button>
-                            <Button as="a" href="https://t.me/username"
+                            <Button as="a" href="https://t.me/Narrator8"
                                 class="rounded-full bg-gradient-to-r from-pink-300 to-pink-400 text-white p-3 shadow-md">
                                 <Send class="size-4" />
                             </Button>
