@@ -17,7 +17,7 @@ import Card from './ui/card/Card.vue';
                     <AccordionItem value="item-1">
                         <AccordionTrigger
                             class="relative [&>svg.plus]:opacity-100 [&>svg.plus]:scale-100 [&>svg.minus]:opacity-0 [&>svg.minus]:scale-95 [&[data-state=open]>svg.plus]:opacity-0 [&[data-state=open]>svg.plus]:scale-95 [&[data-state=open]>svg.minus]:opacity-100 [&[data-state=open]>svg.minus]:scale-100 transition-all">
-                            <h4 class="text-wrap">Неприятные эмоции и пережевания</h4>
+                            <h4 class="text-wrap">Неприятные эмоции и переживания</h4>
                             <template #icon>
                                 <CirclePlus
                                     class="plus text-muted-foreground pointer-events-none size-4 shrink-0 absolute right-0 top-1/2 -translate-y-1/2 transition-all duration-200" />

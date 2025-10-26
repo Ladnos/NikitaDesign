@@ -1,6 +1,6 @@
 <template>
     <div class="my-8 ">
-        <video ref="videoRef" class="mx-auto rounded-lg" width="720" height="480" controls muted>
+        <video ref="videoRef" class="mx-auto rounded-lg" width="720" height="480" controls muted loop>
             <source src="../assets/levan.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
