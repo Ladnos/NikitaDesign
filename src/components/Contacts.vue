@@ -1,4 +1,12 @@
 <template>
+    <div class="my-8 ">
+        <video ref="videoRef" class="mx-auto rounded-lg" width="720" height="480" controls muted>
+            <source src="../assets/levan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+    </div>
     <div class="lg:w-2/5 w-full mx-auto py-8">
         <div class="flex flex-col lg:flex-row gap-6">
             <Card class="flex-1">
@@ -33,10 +41,38 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 import Card from './ui/card/Card.vue'
 import CardHeader from './ui/card/CardHeader.vue'
 import CardTitle from './ui/card/CardTitle.vue'
 import CardContent from './ui/card/CardContent.vue'
 import Button from './ui/button/Button.vue'
 import { MessageSquare, Send } from 'lucide-vue-next'
+
+const videoRef = ref<HTMLVideoElement | null>(null)
+let observer: IntersectionObserver | null = null
+
+onMounted(() => {
+    if (!videoRef.value) return
+
+    observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                videoRef.value?.play()
+            } else {
+                videoRef.value?.pause()
+            }
+        })
+    }, {
+        threshold: 0.5 // Запускать когда видео видно наполовину
+    })
+
+    observer.observe(videoRef.value)
+})
+
+onUnmounted(() => {
+    if (observer) {
+        observer.disconnect()
+    }
+})
 </script>
